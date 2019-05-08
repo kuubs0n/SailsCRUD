@@ -13,6 +13,46 @@ module.exports.routes = {
   //  ╦ ╦╔═╗╔╗ ╔═╗╔═╗╔═╗╔═╗╔═╗
   //  ║║║║╣ ╠╩╗╠═╝╠═╣║ ╦║╣ ╚═╗
   //  ╚╩╝╚═╝╚═╝╩  ╩ ╩╚═╝╚═╝╚═╝
+  'get /phonebook': {
+		controller	: 'phonebook',
+		action		: 'index'
+	},
+	'get /phonebook/:id': {
+		controller	: 'phonebook',
+		action		: 'find'
+	},
+	'post /phonebook': {
+		controller	: 'phonebook',
+		action		: 'create'
+	},
+	'put /phonebook/:id': {
+		controller	: 'phonebook',
+		action		: 'update'
+  },
+  'post /phonebook/update/:id' : {
+    controller : 'phonebook',
+    action: 'update'
+  },
+	'delete /phonebook/:id': {
+		controller	: 'phonebook',
+		action		: 'destroy'
+  },
+  'get /phonebook/new': {
+    controller : 'phonebook',
+    action: 'new'
+  },
+  'post /phonebook/create': {
+    controller: 'phonebook',
+    action: 'create'
+  },
+  'get /phonebook/show/:id': {
+    controller: 'phonebook',
+    action: 'show'
+  },
+  'get /phonebook/edit/:id': {
+    controller: 'phonebook',
+    action: 'edit'
+  },
   'POST /api/v1/phoneBook/create' : { action: 'api/phoneBook/create'},
   'PUT /api/v1/phoneBook/update/:phoneRowId': { action: 'api/phoneBook/update' },
   'GET /api/v1/phoneBook/index': { action: 'api/phoneBook/index'},

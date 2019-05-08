@@ -13,7 +13,7 @@ module.exports = {
 
 
   exits: {
-
+    
   },
 
 
@@ -24,7 +24,8 @@ module.exports = {
         if(err) {
           reject(err);
         }
-        resolve(phoneRows)
+        //resolve(phoneRows)
+        return exits.success({data: phoneRows});
       })
     })
 

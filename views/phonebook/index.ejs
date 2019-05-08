@@ -1,0 +1,20 @@
+<h1>Listing phone rows</h1>
+
+<table>
+    <tr>
+        <th>Name</th>
+        <th>PhoneNumber</th>
+        <th></th>
+        <th></th>
+    </tr>
+    <% _.each(model, function(row) { %>
+        <tr>
+            <td><%= row.name %></td>
+            <td><%= row.phoneNumber %></td>
+            <td><a href="/phonebook/show/<%= row.id %>">Show</a></td>
+            <td><a href="/phonebook/edit/<%= row.id %>">Edit</a></td>
+    <% }) %>
+        </tr>
+</table>
+
+<a href="/phonebook/new">New PhoneRow</a>

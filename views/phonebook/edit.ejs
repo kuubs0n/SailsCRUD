@@ -1,0 +1,9 @@
+<h1> Editing </h1>
+<form action="/phonebook/update/<%= row.id %>" method="POST">
+
+	<div>Name: <input value="<%= row.name %>" name="name" type="text"/></div>
+	<div>PhoneNumber: <input value="<%= row.phoneNumber %>" name="phoneNumber" type="number"/></div>
+	<input type="submit"/>
+</form>
+
+<a href="/phonebook">Back</a>
